@@ -1,0 +1,110 @@
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 68px;
+  padding: 0 24px;
+  background-color: #141414;
+}
+
+.left-nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 24px;
+  flex: 1;
+}
+
+.main-logo {
+  height: 60px;
+  cursor: pointer;
+}
+
+.main-logo img {
+  height: 100%;
+}
+
+.nav-item-wrapper {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav-item {
+  cursor: pointer;
+  color: #e5e5e5;
+  height: 100%;
+  transition: color 0.4s;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.active-nav-item {
+  transition: color 0.4s;
+  color: #fff;
+  cursor: default;
+  font-weight: 500;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 30px;
+  width: 24px;
+  transition: width 1s;
+}
+
+.open-search-box {
+  border: 1px solid white;
+  padding: 2px 4px;
+  width: 240px;
+  transition: width 1s;
+}
+.searc-icon {
+  height: 28px;
+  cursor: pointer;
+}
+
+.cross-icon {
+  display: none;
+  height: 20px;
+  cursor: pointer;
+}
+
+.show-cross-icon {
+  display: block;
+}
+
+.input-text {
+  all: unset; /* Resets all default styles */
+  background: transparent; /* No background */
+  color: white; /* Text color */
+  border: none;
+}
+
+.input-text:focus,
+.input-text:active {
+  outline: none; /* No outline on focus */
+  border: none; /* No border */
+  box-shadow: none; /* No shadow */
+  border: none;
+}
+
+.input-text,
+.cross-icon {
+  /* display: none; */
+  visibility: hidden;
+  /* width: 0; */
+  transition: visibility 0.4s;
+}
+
+.open-search-box .input-text,
+.open-search-box .cross-icon {
+  /* display: block; */
+  /* width: unset; */
+
+  visibility: visible;
+  transition: visibility 0.4s;
+}

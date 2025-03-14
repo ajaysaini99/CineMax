@@ -1,14 +1,17 @@
-import { useState } from 'react'
-import './App.css'
+import { useState, useEffect } from "react";
+import "./App.css";
+import tmdbClient from "./services/tmdb";
 
 function App() {
+  useEffect(() => {
+    const abc = new tmdbClient();
+  });
 
   return (
     <>
-      <div>
-      </div>
+      <div></div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
