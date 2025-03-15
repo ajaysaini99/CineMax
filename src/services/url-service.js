@@ -1,10 +1,10 @@
 import urlJoin from "url-join";
 
-const BASE_URL = "https://api.themoviedb.org/3";
+const BASE_URL =
+  process.env.NODE_ENV === "production" ? "/api" : "http://localhost:5000/api";
 
 export default {
   POPULAR_MOVIES: () => {
-    const abc = urlJoin(BASE_URL, "/movie/popular");
-    return abc;
+    return urlJoin(BASE_URL, "/movie/popular");
   },
 };
